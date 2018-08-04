@@ -1,0 +1,25 @@
+{
+  "name": "infection",
+  "version": "0.0.0",
+  "description": "infect the cells",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehdikazemnia/infection.git"
+  },
+  "author": "Mehdi Kazemnia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehdikazemnia/infection/issues"
+  },
+  "homepage": "https://github.com/mehdikazemnia/infection#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "gsap": "^2.0.1",
+    "pixi.js": "^4.8.1",
+    "red-steer": "0.0.2"
+  }
+}
