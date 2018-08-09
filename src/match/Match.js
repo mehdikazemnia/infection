@@ -13,6 +13,7 @@ class Match extends Map {
 
     makeCell(settings) {
         let cell = new Cell(settings);
+        this.append(cell);
     }
 
     makeVirus(settings) {
