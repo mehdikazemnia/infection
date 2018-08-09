@@ -26,10 +26,12 @@ class Match extends Map {
     makeCell(settings) {
         let cell = new Cell(settings);
         this.append(cell);
+        return cell;
     }
 
     makeVirus(settings) {
         let virus = new Virus(settings);
+        return virus
     }
 
 }
