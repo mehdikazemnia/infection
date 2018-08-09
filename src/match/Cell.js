@@ -8,6 +8,8 @@ class Cell extends Circle {
             radius: settings.radius
         });
 
+        this.texture = PIXI.utils.TextureCache[settings.type];
+        this.view = false;
     }
 
 }
