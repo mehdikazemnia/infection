@@ -16,11 +16,6 @@ class Match extends Map {
             transparent: true
         });
 
-        // load textures
-        this.pixiapp.loader
-            .add('cell_gray', 'textures/cell-gray.png')
-            .load(() => { this.onLoad() });
-
         // linking pixiapp to the chain, so it'll be usable in other classes
         this.chain.map.pixiapp = this.pixiapp;
 
@@ -28,7 +23,13 @@ class Match extends Map {
         document.body.appendChild(this.pixiapp.renderer.view);
     }
 
-    onLoad() {}
+    load(textures, callback) {
+        // TODO: mind the textures variable
+        // load textures
+        this.pixiapp.loader
+            .add('cell_gray', 'textures/cell-gray.png')
+            .load(() => { callback() });
+    }
 
     makeCell(settings) {
         let cell = new Cell(settings);
