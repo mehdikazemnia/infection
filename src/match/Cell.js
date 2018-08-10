@@ -13,6 +13,8 @@ class Cell extends Circle {
         this.view.x = this.position.x;
         this.view.y = this.position.y;
         this.view.width = this.view.height = this.radius * 2;
+        this.view.anchor.set(.5,.5);
+
     }
 
     join(chain) {
