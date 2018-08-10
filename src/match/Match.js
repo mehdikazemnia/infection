@@ -19,6 +19,8 @@ class Match extends Map {
         // this.pixi.loader
         //     .add('...', '...')
         //     .load(() => { this.onLoad() });
+
+        document.body.appendChild(this.pixiapp.renderer.view);
     }
 
     onLoad() {}
