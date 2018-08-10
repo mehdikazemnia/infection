@@ -8,8 +8,16 @@ class Cell extends Circle {
             radius: settings.radius
         });
 
-        this.texture = PIXI.utils.TextureCache[settings.type];
-        this.view = false;
+        this.texture = PIXI.utils.TextureCache['cell_' + settings.color];
+        this.view = new PIXI.Sprite(this.texture);
+        this.view.x = this.position.x;
+        this.view.y = this.position.y;
+        this.view.width = this.view.height = this.radius * 2;
+    }
+
+    join(chain) {
+        super.join(chain);
+        this.chain.map.pixiapp.stage.addChild(this.view);
     }
 
 }
