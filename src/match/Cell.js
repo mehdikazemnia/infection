@@ -13,8 +13,15 @@ class Cell extends Circle {
         this.view.x = this.position.x;
         this.view.y = this.position.y;
         this.view.width = this.view.height = this.radius * 2;
-        this.view.anchor.set(.5,.5);
+        this.view.anchor.set(.5, .5);
 
+        // interactivity and cursor style
+        this.view.interactive = true;
+        this.view.buttonMode = true;
+
+        this.view.on('pointerdown', () => {
+            console.log('someone hit me', this); // test for now
+        });
     }
 
     join(chain) {
