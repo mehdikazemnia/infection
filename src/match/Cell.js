@@ -19,8 +19,16 @@ class Cell extends Circle {
         this.view.interactive = true;
         this.view.buttonMode = true;
 
-        this.view.on('pointerdown', () => {
-            console.log('someone hit me', this); // test for now
+        // hitArea must be a circle, not a rectangle
+        let hitArea = new PIXI.Circle(0, 0, 200); // stupid bug fix!? 200 radius because the texture is 400x400
+        this.view.hitArea = hitArea;
+
+        this.view.on('mouseover', () => {
+            this.view.texture = PIXI.utils.TextureCache['cell_red'];
+        });
+        
+        this.view.on('mouseout', () => {
+            this.view.texture = PIXI.utils.TextureCache['cell_' + settings.color];
         });
     }
 
