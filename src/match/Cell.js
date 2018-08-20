@@ -37,8 +37,8 @@ class Cell extends Circle {
 
         // circle spite
         this.assets.circle = new PIXI.Sprite(circleTexture);
-        this.assets.circle.x = this.view.x;
-        this.assets.circle.y = this.view.y;
+        this.assets.circle.x = this.position.x;
+        this.assets.circle.y = this.position.y;
         this.assets.circle.anchor.set(.5, .5);
         this.assets.circle.visible = false;
 
