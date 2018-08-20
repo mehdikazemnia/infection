@@ -42,6 +42,16 @@ class Cell extends Circle {
         this.assets.circle.anchor.set(.5, .5);
         this.assets.circle.visible = false;
 
+        this.assets.text = new PIXI.Text('0', {
+            fontFamily: 'Arial',
+            fontSize: 24,
+            fill: 0x999999,
+            align: 'center'
+        });
+        this.assets.text.x = this.position.x;
+        this.assets.text.y = this.position.y;
+        this.assets.text.anchor.set(.5,.5);
+
         this.view.on('mouseover', () => {
             this.assets.circle.visible = true;
         });
@@ -55,6 +65,7 @@ class Cell extends Circle {
         super.join(chain);
         this.chain.map.pixiapp.stage.addChild(this.view);
         this.chain.map.pixiapp.stage.addChild(this.assets.circle);
+        this.chain.map.pixiapp.stage.addChild(this.assets.text);
     }
 
 }
